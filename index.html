@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width initial-scale=1.0"/>
+<title>Form</title>
+<style>
+* {    
+    font-family: "Gill Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+	box-sizing:border-box;
+}
+html{
+font-size:16px;
+overflow-y:hidden;
+background:#e1e1e1;
+}
+.content{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.form{
+display:flex;
+flex-direction:column;
+gap:20px;
+border:2px solid black;
+padding:30px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.3);
+background:#fff;
+}
+#name,#email,#contact{
+width:300px;
+padding:10px;
+border:0;
+outline:0;
+border-bottom:2px solid black;
+}
+label{
+font-size:16px;
+color:#333;
+letter-spacing:2px;
+}
+#but{
+font-size:18px;
+padding:8px 42px;
+background:orange;
+border:none;
+color:white;
+letter-spacing:1.8px;
+}
+@media screen and (max-width:728px ){
+html{
+font-size:14px;
+}
+.content{
+height:95vh;
+}
+label{
+font-size:14px;
+}
+}
+@media screen and (max-width:920px)and (orientation:landscape) {
+.content{
+height:100vh;
+}
+}
+</style>
+<script>
+function sub(){
+var n=document.getElementById("name").value;
+var e=document.getElementById("email").value;
+var p=document.getElementById("contact").value;
+if(n=="")
+alert("please fill the details");
+else if(e =="")
+alert("please fill email");
+else if(p=="")
+alert("please fill the phone number");
+else
+alert("Applied Successfully");
+}
+</script>
+</head>
+<body>
+<div class="content">
+<div class="form">
+    <h2 style="background:teal; color:white; padding:10px;text-align:center;">JOB FORM</h2>
+	<div class="box">
+	<label>Name</label><br>
+	<input type="text" id="name" placeholder="Full name...." required/><br>
+	</div>
+	<div class="box">
+	<label>Email</label><br>
+	<input type="email" id="email" placeholder="Email...." required/><br>
+	</div>
+	<div class="box">
+	<label>Contact</label><br>
+	<input type="text" id="contact" placeholder="Contact number...." required/><br>
+	</div>
+	<div class="box">
+	<label>Preferred Location</label><br>
+	<Select>
+	<option vlaue="Automation">Hyderabad</option>
+	<option vlaue="Web">Chennai</option>
+	</Select>
+	</div>
+	<div class="box">
+	<label>Select job role</label><br>
+	<Select>
+	<option vlaue="Automation">Automation Testing</option>
+	<option vlaue="Web">Web developer</option>
+	</Select>
+	</div>
+	<div class="box">
+	<input type="file"/>
+	</div>
+	<div class="box">
+	<label>Joining date</label>
+	<input type="date"/>
+	</div>
+	<div class="box">
+	<button id="but" onclick="sub()">Submit</button>
+	</div>
+</div>
+</div>
+</body>
+</html>
+
+
